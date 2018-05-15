@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}
+	Article No {{id}}
+{% endblock title %}
+
+{% block body %}
+	<p>
+	{% if id %}
+		Vous avez choisi l&#039;article No {{id}}
+	{% else %}
+		Vous n&#039;avez choisi aucun article
+	{% endif %}
+	</p>
+{% endblock body %}

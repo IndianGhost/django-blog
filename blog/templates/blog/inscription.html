@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}
+	Inscription
+{% endblock title %}
+
+{% block body %}
+	<p>
+		{% if titre and auteur and contenu%}
+			{{titre}}<br/>
+			{{auteur}}<br>
+			{{contenu}}
+		{% endif %}
+	</p>
+	<form method="get" action="{% url 'inscription' %}">
+		<fieldset>
+			<legend>Inscription</legend>
+			<label>Titre : </label>
+			<input type="text" name="titre">
+			<label>Auteur : </label>
+			<input type="text" name="auteur">
+			<label>Contenu : </label>
+			<textarea name="contenu" cols="6" rows="3">
+			</textarea>
+		</fieldset>
+		<input type="submit" value="S&#039;inscrire" />
+		<input type="reset" name="Annuler">
+	</form>
+{% endblock body %}
